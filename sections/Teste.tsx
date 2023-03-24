@@ -5,7 +5,7 @@ export interface Props{
 export default function Teste( {title}: Props) {
   return (
     <div class="bg-gray-300">
-        {title}
+        Estou informando um titulo no 3° commit: {title}
     </div>
   )
 }
