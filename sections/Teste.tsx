@@ -1,8 +1,8 @@
-export interface iDados{
+export interface Props{
     title: string;
 }
 
-export default function Teste( {title}: iDados) {
+export default function Teste( {title}: Props) {
   return (
     <div class="bg-gray-300">
         {title}
