@@ -13,6 +13,7 @@ import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
 import * as $$$2 from "./sections/Markdown.tsx";
 import * as $$$3 from "./sections/QuillText.tsx";
+import * as $$$4 from "./sections/Teste.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -28,6 +29,7 @@ const manifest: DecoManifest = {
     "./sections/Head.tsx": $$$1,
     "./sections/Markdown.tsx": $$$2,
     "./sections/QuillText.tsx": $$$3,
+    "./sections/Teste.tsx": $$$4,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -126,6 +128,22 @@ const manifest: DecoManifest = {
         },
         "required": [
           "html",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Teste.tsx": {
+      "inputSchema": {
+        "title": " Teste",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+        },
+        "required": [
+          "title",
         ],
       },
       "outputSchema": null,
