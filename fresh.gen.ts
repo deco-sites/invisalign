@@ -9,9 +9,10 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/Head.tsx";
-import * as $$$1 from "./sections/QuillText.tsx";
-import * as $$$2 from "./sections/Teste.tsx";
+import * as $$$0 from "./sections/GetStarted.tsx";
+import * as $$$1 from "./sections/Head.tsx";
+import * as $$$2 from "./sections/Markdown.tsx";
+import * as $$$3 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -23,12 +24,30 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
-    "./sections/Head.tsx": $$$0,
-    "./sections/QuillText.tsx": $$$1,
-    "./sections/Teste.tsx": $$$2,
+    "./sections/GetStarted.tsx": $$$0,
+    "./sections/Head.tsx": $$$1,
+    "./sections/Markdown.tsx": $$$2,
+    "./sections/QuillText.tsx": $$$3,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
+    "./sections/GetStarted.tsx": {
+      "inputSchema": {
+        "title": " Get Started",
+        "type": "object",
+        "properties": {
+          "enableInspectVSCode": {
+            "type": [
+              "boolean",
+              "null",
+            ],
+            "title": "Enable Inspect V S Code",
+          },
+        },
+        "required": [],
+      },
+      "outputSchema": null,
+    },
     "./sections/Head.tsx": {
       "inputSchema": {
         "title": " Head",
@@ -78,6 +97,22 @@ const manifest: DecoManifest = {
       },
       "outputSchema": null,
     },
+    "./sections/Markdown.tsx": {
+      "inputSchema": {
+        "title": " Markdown",
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text",
+          },
+        },
+        "required": [
+          "text",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/QuillText.tsx": {
       "inputSchema": {
         "title": " Quill Text",
@@ -91,22 +126,6 @@ const manifest: DecoManifest = {
         },
         "required": [
           "html",
-        ],
-      },
-      "outputSchema": null,
-    },
-    "./sections/Teste.tsx": {
-      "inputSchema": {
-        "title": " Teste",
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "title": "Title",
-          },
-        },
-        "required": [
-          "title",
         ],
       },
       "outputSchema": null,
